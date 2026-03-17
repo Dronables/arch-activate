@@ -1,0 +1,267 @@
+<!--
+  arch-activate
+  Copyright (C) 2026 Dronables
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  https://www.gnu.org/licenses/gpl-3.0.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activate Arch Linux</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0d1117;
+    color: #cdd6f4;
+    font-family: 'JetBrains Mono', monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav {
+    background: #1e1e2e;
+    border-bottom: 1px solid #313244;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    height: 56px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .arch-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-logo span {
+    color: #1793d1;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: #a6adc8;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: #1793d1; }
+
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .error-code {
+    font-size: 13px;
+    color: #6c7086;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
+  }
+
+  .big-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    color: #1793d1;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 300;
+    color: #a6adc8;
+    margin-bottom: 3rem;
+    max-width: 600px;
+  }
+
+  .card {
+    background: #1e1e2e;
+    border: 1px solid #313244;
+    border-radius: 8px;
+    padding: 2rem 2.5rem;
+    max-width: 560px;
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  .card-title {
+    font-size: 13px;
+    color: #6c7086;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+
+  .terminal-line {
+    font-size: 14px;
+    color: #a6e3a1;
+    margin-bottom: 0.5rem;
+  }
+
+  .terminal-line .prompt { color: #1793d1; }
+  .terminal-line .cmd { color: #cdd6f4; }
+  .terminal-line .comment { color: #6c7086; }
+
+  .facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 560px;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .fact {
+    background: #1e1e2e;
+    border: 1px solid #313244;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+  }
+
+  .fact-label {
+    font-size: 11px;
+    color: #6c7086;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.4rem;
+  }
+
+  .fact-value {
+    font-size: 14px;
+    color: #cdd6f4;
+    font-weight: 400;
+  }
+
+  .back-link {
+    font-size: 13px;
+    color: #6c7086;
+    margin-top: 1rem;
+  }
+
+  .back-link a {
+    color: #1793d1;
+    text-decoration: none;
+  }
+
+  footer {
+    background: #1e1e2e;
+    border-top: 1px solid #313244;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 12px;
+    color: #6c7086;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#">
+    <svg class="arch-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 2L28 28H4L16 2Z" fill="none" stroke="#1793d1" stroke-width="2"/>
+      <path d="M16 8L24 26H8L16 8Z" fill="#1793d1" opacity="0.3"/>
+    </svg>
+    <span>archlinux.org</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#">Download</a></li>
+    <li><a href="#">Packages</a></li>
+    <li><a href="#">Wiki</a></li>
+    <li><a href="#">Forums</a></li>
+    <li><a href="#">Bugs</a></li>
+    <li><a href="#" style="color:#e06c75">activate</a></li>
+  </ul>
+</nav>
+
+<main class="main">
+  <div class="error-code">404 — page not found (and also why are you here)</div>
+
+  <h1 class="big-title">Arch Linux is free.<br>What are you doing here?</h1>
+
+  <p class="subtitle">
+    There is no activation. There never was. You just install it and suffer like everyone else.
+  </p>
+
+  <div class="card">
+    <div class="card-title">// activation process</div>
+    <div class="terminal-line">
+      <span class="prompt">$ </span>
+      <span class="cmd">sudo pacman -S activate-arch</span>
+    </div>
+    <div class="terminal-line" style="color: #f38ba8;">
+      error: target not found: activate-arch
+    </div>
+    <div class="terminal-line" style="margin-top: 0.75rem;">
+      <span class="prompt">$ </span>
+      <span class="cmd">sudo pacman -S activate-windows</span>
+    </div>
+    <div class="terminal-line" style="color: #f38ba8;">
+      error: you installed arch, not windows. what.
+    </div>
+    <div class="terminal-line" style="margin-top: 0.75rem;">
+      <span class="prompt">$ </span>
+      <span class="comment"># just use it bro</span>
+    </div>
+  </div>
+
+  <div class="facts">
+    <div class="fact">
+      <div class="fact-label">LICENSE</div>
+      <div class="fact-value" style="color: #a6e3a1;">GPL — free forever</div>
+    </div>
+    <div class="fact">
+      <div class="fact-label">ACTIVATION KEY</div>
+      <div class="fact-value" style="color: #f38ba8;">does not exist</div>
+    </div>
+    <div class="fact">
+      <div class="fact-label">COST</div>
+      <div class="fact-value" style="color: #a6e3a1;">$0.00</div>
+    </div>
+    <div class="fact">
+      <div class="fact-label">YOUR SANITY</div>
+      <div class="fact-value" style="color: #fab387;">optional</div>
+    </div>
+  </div>
+
+  <div class="back-link">
+    Lost? Go back to <a href="https://archlinux.org">archlinux.org</a> and pretend this never happened.
+  </div>
+</main>
+
+<footer>
+  &copy; 2026 Arch Linux — free as in freedom, free as in beer, free as in please just read the wiki
+</footer>
+
+</body>
+</html>
